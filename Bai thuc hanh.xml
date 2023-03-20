@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE CTBDS [
+<!ELEMENT CTBDS (DsTaoNha)>
+<!ELEMENT DsTaoNha (ToaNha+)>
+<!ELEMENT ToaNha (diachi, dacdiem, dientich, tongsotang, tongsophong, dstang, dshopdong)>
+<!ATTLIST ToaNha ten CDATA #REQUIRED>
+<!ELEMENT diachi (#PCDATA)>
+<!ELEMENT dacdiem (#PCDATA)>
+<!ELEMENT dientich (#PCDATA)>
+<!ELEMENT tongsotang (#PCDATA)>
+<!ELEMENT tongsophong (#PCDATA)>
+<!ELEMENT dstang (tang+)>
+<!ELEMENT tang (sophong, dsphong)>
+<!ATTLIST tang idtang CDATA #REQUIRED>
+<!ELEMENT sophong (#PCDATA)>
+<!ELEMENT dsphong (phong+)>
+<!ELEMENT phong (dientich, phanloai, socholamviec, mota, giathue)>
+<!ELEMENT phanloai (#PCDATA)>
+<!ELEMENT socholamviec (#PCDATA)>
+<!ELEMENT mota (#PCDATA)>
+<!ELEMENT giathue (#PCDATA)>
+<!ATTLIST phong idphong CDATA #REQUIRED>
+<!ELEMENT dshopdong (hopdong+)>
+<!ELEMENT hopdong (nguoilap,tenkhachhang, sodienthoai, ngaybdthue, ngayktthue, tongtienthue, tongtiencoc,sothangthue, dsphongthue)>
+<!ATTLIST hopdong id CDATA #REQUIRED>
+<!ELEMENT nguoilap (#PCDATA)>
+<!ELEMENT tenkhachhang (#PCDATA)>
+<!ELEMENT sodienthoai (#PCDATA)>
+<!ELEMENT ngaybdthue (#PCDATA)>
+<!ELEMENT ngayktthue (#PCDATA)>
+<!ELEMENT tongtienthue (#PCDATA)>
+<!ELEMENT tongtiencoc (#PCDATA)>
+<!ELEMENT sothangthue (#PCDATA)>
+<!ELEMENT dsphongthue (phong+)>
+]>
+<CTBDS>
+    <DsTaoNha>
+        <ToaNha ten="GoldenHouse">
+            <diachi>Thuy Nguyen</diachi>
+            <dacdiem>Mau trang</dacdiem>
+            <dientich>500m2</dientich>
+            <tongsotang>20</tongsotang>
+            <tongsophong>200</tongsophong>
+            <dstang>
+                <tang idtang="1">
+                    <sophong>10</sophong>
+                    <dsphong>
+                        <phong idphong="1">
+                            <dientich>40m2</dientich>
+                            <phanloai>Van phong</phanloai>
+                            <socholamviec>10</socholamviec>
+                            <mota>Day du tien ich</mota>
+                            <giathue>3 trieu</giathue>
+                        </phong>
+                        <phong idphong="2">
+                            <dientich>40m2</dientich>
+                            <phanloai>Kho</phanloai>
+                            <socholamviec>10</socholamviec>
+                            <mota>Day du tien ich</mota>
+                            <giathue>3 trieu</giathue>
+                        </phong>
+                    </dsphong>
+                </tang>
+            </dstang>
+            <dshopdong>
+                <hopdong id="1">
+                    <nguoilap>NV1</nguoilap>
+                    <tenkhachhang>Cty Alpha</tenkhachhang>
+                    <sodienthoai>0123456789</sodienthoai>
+                    <ngaybdthue>1/1/2023</ngaybdthue>
+                    <ngayktthue>1/7/2023</ngayktthue>
+                    <tongtienthue>36 trieu</tongtienthue>
+                    <tongtiencoc>18 trieu</tongtiencoc>
+                    <sothangthue>6</sothangthue>
+                    <dsphongthue>
+                        <phong idphong="1">
+                            <dientich>40m2</dientich>
+                            <phanloai>Van Phong</phanloai>
+                            <socholamviec>10</socholamviec>
+                            <mota>Day du tien ich</mota>
+                            <giathue>3 trieu</giathue>
+                        </phong>
+                    </dsphongthue>
+                </hopdong>
+            </dshopdong>
+        </ToaNha>
+    </DsTaoNha>
+</CTBDS>
